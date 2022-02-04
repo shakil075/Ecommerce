@@ -35,7 +35,7 @@ class SearchProduct extends Component {
         <Products data={data} posts={currentPosts} />
         <Pagination
           postsPerPage={postPage}
-          totalPosts={posts.length}
+          totalPosts={data == "" || data == "all" ? posts.length : data.length}
           paginate={this.paginate}
           cp={currentPage}
         />

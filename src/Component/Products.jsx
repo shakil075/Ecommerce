@@ -17,10 +17,8 @@ class Products extends Component {
     const { data, posts } = this.props;
     let searchProduct;
 
-    if (posts !== []) {
+    if (data == "" || data == "all") {
       searchProduct = posts;
-    } else if (data == "" || data == "all") {
-      searchProduct = products;
     } else {
       searchProduct = products.filter((curData) => {
         if (
