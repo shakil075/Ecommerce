@@ -1,0 +1,107 @@
+.helloHeading {
+    height: 7vh;
+    background-color: #232f3e;
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 900;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2.5rem;
+    z-index: 1000;
+}
+
+.mainSideDiv {
+    padding: 1rem 0;
+    height: 93vh;
+    z-index: 1000;
+    position: relative;
+    overflow: hidden;
+}
+
+.listDiv {}
+
+.mainUl:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.mainUl li {
+    padding: 1.5rem 3rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar2 ul li {
+    letter-spacing: 0.1rem;
+    word-spacing: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar2 ul li:first-child {
+    padding: 1.5rem 3rem;
+}
+
+.mainUl li:not(:first-child):hover,
+.sidebar2 ul li:not(:first-child):hover,
+.sidebar2 div:hover {
+    background-color: #eaeded;
+}
+
+.mainUl li:nth-child(1),
+.sidebar2 ul li:nth-child(1) {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 568px) {
+    .mainUl li:nth-child(1),
+    .sidebar2 ul li:nth-child(1) {
+        font-size: 1.5rem;
+    }
+}
+
+.mainUl li:not(:first-child),
+.sidebar2 ul li:not(:first-child) {
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.hoverEffect {
+    color: rgba(0, 0, 0, 0.3);
+    transition: all 0.15s ease;
+}
+
+.mainUl li:hover .hoverEffect,
+.sidebar2 div:hover .hoverEffect {
+    color: black;
+}
+
+.close {
+    position: absolute;
+    right: -4rem;
+    top: 2rem;
+    z-index: 1000;
+    color: white;
+    font-size: 3.3rem !important;
+    cursor: pointer;
+}
+
+.sidebar2 {}
+
+.sidebar2 div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+}

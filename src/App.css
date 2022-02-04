@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: "Dongle", sans-serif; */
+    /* max-width: 1500px; */
+    font-family: "Urbanist", sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    justify-self: flex-end;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@media only screen and (max-width: 1024px) {
+    html {
+        font-size: 57%;
+    }
+}
+
+@media only screen and (max-width: 968px) {
+    html {
+        font-size: 52%;
+    }
+}
+
+body.active {
+    overflow: hidden;
+}
+
+.slick-prev {
+    left: 1% !important;
+    z-index: 1;
+    /* background-color: rgba(0, 0, 0, 0.733) !important; */
+    background-color: rgba(43, 82, 95, 0.479) !important;
+    height: 4rem !important;
+    width: 3rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2rem;
+}
+
+.slick-slide {}
+
+.slick-next {
+    right: 1% !important;
+    z-index: 1;
+    background-color: rgba(43, 82, 95, 0.479) !important;
+    height: 4rem !important;
+    width: 3rem !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2rem;
+}
