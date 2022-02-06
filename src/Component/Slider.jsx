@@ -1,5 +1,5 @@
-import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
-import React, { Component, useContext, useState } from "react";
+import { NavLink } from "react-router-dom";
+import React, { Component } from "react";
 import styled from "styled-components";
 import { DataContext } from "../lib/Context";
 import Slider from "react-slick";
@@ -44,26 +44,25 @@ const InfoContainer = styled.div`
 `;
 const Title = styled.h1`
   font-size: 65px;
-  ${tablet({ fontSize: "50px" })}
-  ${tablet2({ fontSize: "45px" })}
+  ${tablet({ fontSize: "5rem" })}
+  ${tablet2({ fontSize: "4rem" })}
 `;
 const Desc = styled.p`
-  font-size: 25px;
+  font-size: 2.5rem;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
   font-family: "Dongle", sans-serif;
-  ${tablet({ fontSize: "20px" })}
-  ${tablet2({ fontSize: "18px" })}
+  ${tablet({ fontSize: "2rem" })}
+  ${tablet2({ fontSize: "1.8rem" })}
 `;
 const Button = styled.a`
   padding: 0 0.5rem;
   font-size: 2.5rem;
   background-color: transparent;
   cursor: pointer;
-  color: #febd69;
   text-transform: uppercase;
   font-family: "Dongle", sans-serif;
-  ${tablet({ fontSize: "25px" })}
+  ${tablet({ fontSize: "2.5rem" })}
 `;
 
 const Heading = styled.h1`
@@ -160,7 +159,14 @@ class Sliders extends Component {
               <InfoContainer>
                 <Title></Title>
                 <Desc>Price : {item.price} TK.</Desc>
-                <Button>Shop Now</Button>
+                <Button>
+                  <NavLink
+                    style={{ textDecoration: "none", color: "#febd69" }}
+                    to={`/products/${item.id}`}
+                  >
+                    Shop Now
+                  </NavLink>
+                </Button>
               </InfoContainer>
             </Slide>
           ))}

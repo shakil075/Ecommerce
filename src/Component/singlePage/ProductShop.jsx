@@ -9,23 +9,26 @@ import { Component } from "react";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
-  padding: 50px;
+  padding: 5rem;
   display: flex;
-  ${mobile({ padding: "10px", flexDirection: "column" })}
+  ${mobile({ padding: "1rem", flexDirection: "column", marginTop: "1.5rem" })}
 `;
 const ImgContainer = styled.div`
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const Image = styled.img`
   max-width: 100%;
-  max-height: 500px;
+  max-height: 50rem;
   object-fit: cover;
-  ${mobile({ maxHeight: "40vh" })}
+  ${mobile({ maxHeight: "30rem", width: "30rem" })}
 `;
 const InfoContainer = styled.div`
   flex: 1;
-  padding: 0px 50px;
-  ${mobile({ padding: "10px" })}
+  padding: 0 5rem;
+  ${mobile({ padding: "1rem" })}
 `;
 const Title = styled.h1`
   font-size: 3rem;
@@ -44,7 +47,7 @@ const FilterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin: 30px 0px;
+  margin: 3rem 0;
   ${mobile({ width: "100%" })}
 `;
 const Filter = styled.div`
@@ -52,20 +55,20 @@ const Filter = styled.div`
   align-items: center;
 `;
 const FilterTitle = styled.span`
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 200;
 `;
 const FilterColor = styled.div`
-  width: 20px;
-  height: 20px;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   background-color: ${(props) => props.color};
-  margin: 0px 5px;
+  margin: 0 0.5rem;
   cursor: pointer;
 `;
 const FilterSize = styled.select`
-  margin-left: 10px;
-  padding: 5px;
+  margin-left: 1rem;
+  padding: 0.5rem;
 `;
 const FilterSizeOption = styled.option``;
 
@@ -136,7 +139,7 @@ class ProductShop extends Component {
         <NavLink
           style={{
             fontSize: "2rem",
-            padding: " 1rem",
+            padding: "2rem 1rem",
             color: "lightsalmon",
             textDecoration: "none",
             textTransform: "capitalize",

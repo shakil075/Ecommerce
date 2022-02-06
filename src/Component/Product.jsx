@@ -7,7 +7,7 @@ import {
 import { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { DataContext } from "../lib/Context";
-import { mobile5 } from "../lib/responsive";
+import { mobile, mobile5 } from "../lib/responsive";
 
 const Info = styled.div`
   width: 100%;
@@ -15,7 +15,7 @@ const Info = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(173, 216, 230, 0.404);
   z-index: 3;
   display: flex;
   align-items: center;
@@ -23,6 +23,12 @@ const Info = styled.div`
   opacity: 0;
   transition: all 0.5s ease;
   cursor: pointer;
+  ${mobile({
+    opacity: "1",
+    backgroundColor: "rgba(173, 216, 230, 0.404)",
+    height: "20%",
+    top: "50%",
+  })}
 `;
 
 const Container = styled.div`
